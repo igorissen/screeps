@@ -5,10 +5,27 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     screeps: {
-      options: env,
-      dist: { src: ['src/main.js'] }
+      world: {
+        options: {
+          ptr: false,
+          branch: 'default',
+          email: env.email,
+          password: env.password
+        },
+        src: ['src/*.js']
+      },
+      sim: {
+        options: {
+          ptr: false,
+          branch: 'tutorial-1',
+          email: env.email,
+          password: env.password
+        },
+        src: ['src/*.js']
+      }
     }
   });
 
-  grunt.registerTask('default', ['screeps']);
+  grunt.registerTask('world', ['screeps:world']);
+  grunt.registerTask('sim', ['screeps:sim']);
 };

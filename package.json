@@ -21,9 +21,6 @@
   "bugs": {
     "url": "https://github.com/igorissen/screeps/issues"
   },
-  "scripts": {
-    "start": "grunt"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged"
